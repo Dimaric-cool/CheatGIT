@@ -46,6 +46,7 @@ __id_rsa.pub.__
 ```> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter] ```
 ###   Windows
 ```> Enter a file in which to save the key (C:\Users\<имя_пользователя>\.ssh\):[Press enter] ```
+
 Теперь в указанной директории появится пара ключей.
 3. Программа запросит кодовую фразу (англ. passphrase) для доступа к SSH-ключу. Вы можете оставить поле пустым. Для этого нажмите Enter, а затем ещё раз Enter для подтверждения.
 ```
