@@ -68,7 +68,9 @@ __id_rsa.pub.__
 В прошлом уроке вы сгенерировали SSH-ключ, но он пока не привязан к аккаунту на GitHub. Исправим это.
 ## Инструкция по связыванию SSH-ключа и GitHub-аккаунта
 1. После выполнения команды __ssh-keygen__ из предыдущего урока в директории __~/.ssh__ будет создано два файла — __id_ed25519__ и __id_ed25519.pub__ (или __id_rsa__ и __id_rsa.pub__ — в зависимости от того, какой алгоритм вы использовали):
+
 **id_ed25519/id_rsa** — приватный ключ (файл без .pub в конце). Ни в коем случае не копируйте его и не делитесь им.
+
 **id_ed25519.pub/id_rsa.pub** — публичный ключ (на это указывает расширение .pub).
 Скопируйте содержимое файла с публичным ключом в буфер обмена.
 ### macOS
@@ -111,8 +113,9 @@ $ ssh -T git@github.com
 Если это первый раз, когда вы используете Git, чтобы поделиться проектом на GitHub, появится похожее предупреждение.
 
     The authenticity of host 'github.com (140.82.121.4)' can't be established. ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU. This key is not known by any other names. Are you sure you want to continue connecting (yes/no/[fingerprint])? 
-    
+
 Это предупреждение сообщает, что вы никогда не соединялись с сервером GitHub. Поэтому Git не может гарантировать, что сервер является тем, за кого он себя выдаёт.
 
 Для подтверждения подлинности сервер генерирует и публикует ключи SHA256. Вы можете проверить ключи GitHub по [этой ссылке](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints). Если ключ в предупреждении совпадает с тем, что вы видите на сайте, значит, сервер является действительным. Введите yes, чтобы продолжить. Вы увидите приветствие на экране.
+
     Hi %ВАШ_АККАУНТ%! You've successfully authenticated, but GitHub does not provide shell access. 
